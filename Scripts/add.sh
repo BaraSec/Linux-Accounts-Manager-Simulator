@@ -1,3 +1,5 @@
+#!/bin/bash
+
 tempId=$1
 
 if [[ ! $1 =~ [0-9]{4,4}$ ]] || [ ${#tempId} -ne 4 ]; then
