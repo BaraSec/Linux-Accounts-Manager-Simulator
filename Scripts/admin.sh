@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ $# -ne 2 ]; then
     echo -n -e '\e[41m'
     echo usage: admin filename sortcriteria
@@ -21,11 +23,11 @@ else
 
 	if [ "$currentOp" = "del" ]; then
              id=$(echo $op | cut -d: -f2)
-	     ./del $id
+	     ./del.sh $id
         elif [ "$currentOp" = "add" ]; then
 	    id=$(echo $op | cut -d: -f2)
 	    name=$(echo $op | cut -d: -f3)
-            ./add $id $name
+            ./add.sh $id $name
         else
 	    echo -n -e '\e[41m'
             echo $(echo $op | cut -d: -f1): unknown option
