@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [[ ! $1 =~ [0-9]{4,4}:* ]]; then
     echo -n -e '\e[41m'
     echo $1: No such id number
